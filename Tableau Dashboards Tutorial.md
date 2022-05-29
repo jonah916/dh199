@@ -8,4 +8,4 @@ This tutorial assumes that you have already downloaded Tableau (available [here]
 
 By the end of this tutorial, we will have created three types of visualizations and integrated them into an interactive dashboard that looks like the following:
 
-![Final Product](Final Product.png)
+![Final Product](/visuals/Final Product.png)
