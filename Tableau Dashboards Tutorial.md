@@ -24,7 +24,7 @@ Start by reading the CSV file into Tableau. There is only one step of data clean
 
 The first visualization we’re going to make is an interactive map showing how each state voted in a given year’s election. We’ll use it to compare electoral maps across different election years.
 
-### a) Election map
+### a) Election Map
 
 On a blank sheet, drag **State** onto the workspace. It should automatically populate with a map of the US, like so:
 
@@ -53,3 +53,15 @@ To make the party breakdown easier to see, let’s change the color scale to Red
 The map is finished! Rename it **“Map”** for future reference. Make sure it looks like this before we move on to the next visualization:
 
 <img src = "https://github.com/jonah916/dh199/blob/main/visuals/Map%20Finished.png" width = "800">
+
+### b) Candidate Vote Totals by Year
+
+Next, we’re going to make a series of barplots showing the top candidates in each election and how many votes they received. Make a new worksheet and add **Year** and **Candidate** to the Rows shelf and **Candidatevotes** to the Columns shelf. (Make sure it aggregates with SUM of vote totals.) Click the Sort descending button above the workspace:
+
+<p align = "center">
+  <img src = "https://github.com/jonah916/dh199/blob/main/visuals/Sort%20descending%20button.png" width = 250>
+</p>                  
+
+With all of the candidates listed, it’s not very readable. Let’s add **Party Simplified** as a filter again, like we did above, and uncheck Other.
+
+Let’s also color by party and reassign each party to its traditional color (democrats blue, republicans red, and libertarians purple). Note that there’s also a **Party Detailed** column – this is **not** the column we want to use:
