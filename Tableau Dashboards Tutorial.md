@@ -65,3 +65,91 @@ Next, we’re going to make a series of barplots showing the top candidates in e
 With all of the candidates listed, it’s not very readable. Let’s add **Party Simplified** as a filter again, like we did above, and uncheck Other.
 
 Let’s also color by party and reassign each party to its traditional color (democrats blue, republicans red, and libertarians purple). Note that there’s also a **Party Detailed** column – this is **not** the column we want to use:
+
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Coloring%20by%20Political%20Party.gif" width = "1000">
+
+Finally, we’ll add **Year** to the filters, like we did above. Try unchecking boxes to compare 3 or 4 elections at once. Last but not least, we’ll change the view from Standard View to Entire View so that we maximize our use of space:
+
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Entire%20View.gif" width = "1000">
+
+Rename sheet as **“Candidate Vote Totals by Year”** and we’re ready to move on.
+
+### c) Party Vote Share by Year
+
+<p align = "center">
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Change%20Mark%20Type.png" height = 450>
+</p>
+  
+The last visualization we’re going to make before our dashboard is a line graph of party vote share by year. Make a new sheet and drag **Year** to the Columns shelf and **Candidatevotes** to the Rows shelf. The default plot will be a barplot, but we can change this to a line graph by clicking on the dropdown menu under Marks and selecting “Line”. (See left)
+
+Let’s break it up by party. Drag **Party Simplified** to the Colors mark. By now, the graph should look like this:
+
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Line%20Graph%20Middle.png" width = "800">
+
+We want it in terms of party vote percentage, which means we have to use a quick calculation on the **Candidatevotes** variable we put in the Rows shelf. Right click on that variable > Quick Table Calculation > Percent of Total. Right click on that variable again > Edit Quick Calculation > Compute Using: Table (down). Hovering over each data point should now show each party’s vote share in a given year’s election.
+
+Like in previous steps, add **Year** and **Party Simplified** as filters and show them. Also, change the view to Entire View. The final product should look like this:
+
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Line%20Graph%20Finished.png" width = "800">
+
+Rename this sheet to **“Party Vote Share by Year”** or something similar. Now that our visualizations are complete, we’re ready to build our dashboard!
+
+## 4) Constructing your dashboard
+
+Start by clicking New Dashboard at the bottom of the screen.
+
+### a) Parts of the dashboard workspace
+
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Dashboard%20Workspace.png" width = "800">
+
+`1)` is where you specify what **type of device** the dashboard is for. You might wish to make a dashboard that’s viewable on mobile devices, but for this tutorial we’ll just use the default option, which is a desktop.
+`2)` is where you specify the **size of desktop** the dashboard will be compatible with. Change it to Generic Desktop.
+`3)` is the **list of worksheets** that exist in your workbook. In our case, they are the three visualizations we just made.
+`4)` is the bank of possible **objects** you can add to your dashboard. They let you customize the overall look, for instance by adding titles, third-party images, or blank space. For a complete explanation of each object, look [here](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-dashboard-objects-and-set-their-options).
+`5)` is where you specify whether your **dashboard layout** will be tiled or floating. In a tiled layout, all your sheets snap into a grid-like arrangement. In a floating layout, they are free to exist anywhere. For this tutorial, we’ll use a tiled layout.
+
+### b) Adding sheets to your dashboard
+
+Start to assemble your dashboard by dragging the **Map** sheet to the workspace. It should take up the entire workspace initially. Next, drag the **Candidate Vote Count by Year** barplot to the workspace. As you move it around, you’ll see gray rectangles appearing. These give you a preview of where the sheet will appear if you release it in a given spot.
+
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Adding%20Sheets%20to%20Dashboard.gif" width = "1000">
+
+I dropped the barplot on the right half of the dashboard, but you’re welcome to put it anywhere. Do the same with the **Party Vote Share by Year** line graph. It might make sense to put it in the same column/row as the barplot to give the map extra space, since it can get cluttered if too many years are selected.
+
+### c) Dynamic filters and interactivity
+
+Play around with some of the filters on the right side of the screen and see how the visualizations change. You’ll notice that there are 3 sets of filters, one set that controls each part of the dashboard.
+
+The aim of this section (and the aim of a good dashboard) is to edit the filters such that they link multiple visualizations and show how each changes for different combinations of variables. In this case, we want to be able to see trends in **Candidate Vote Totals by Year** and **Party Vote Share by Year** given specific years and political parties, so that we can ask questions like, How did the Republican candidate’s performance change between 1988 and 1996?
+
+You’ll notice, however, that the electoral **Map** should only be filtered by year and not by political party. This is because the coloring scheme depends on the **Party Simplified** variable, which is filtered to just Democrats in order to display the Democratic vote share in all the years selected.
+
+This means we want to apply **Year** as a filter to all worksheets, and **Party Simplified** as a filter to just the barplot and the line graph.
+
+First, we’ll deal with **Year**. Locate any of the **Year** filters at right and select it. Click the downward pointing arrow, hover over **Apply to Worksheets**, and select **All Using This Data Source**.
+
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Apply%20Year%20Filter%20to%20All.gif" width = "1000">
+
+Try selecting different year values on this filter. Now, this should change the years displayed on all three visualizations. We can get rid of the other two **Year** filters by clicking on each of them and selecting the **X** at the top right of the filter.
+
+This is the basic formula for making dynamic filters that link together multiple worksheets on a dashboard. If you wish to apply a filter to some sheets but not others, the process is only a little more complicated.
+
+To apply the **Party** filter to the barplot and line graph but not the map, first locate the **Party** filter associated with just the map. Check and uncheck different parties to make sure that doing so changes the colors of the map, but not the other two worksheets. (You can also make sure it’s only being applied to the map by clicking on the downward facing arrow associated with this filter, hovering over **Apply to Worksheets**, and making sure that **Only This Worksheet** is selected.)
+
+Make sure that only Democrat is selected and then remove this filter from the dashboard.
+
+Next, choose either of the other two **Party** filters and go back to **Apply to Worksheets** and choose **Selected Worksheets**. Check both **Candidate Vote Totals** by **Year** and **Party Vote Share by Year**. Make sure **Map** remains unchecked. Click OK. 
+
+<img src = "https://github.com/jonah916/dh199/blob/main/visuals/Apply%20Party%20Filter%20to%20Selected.gif" width = "1000">
+
+Make sure this did what we wanted by selecting different values of **Party**. Doing so should affect the barplot and line graph but not the map. If so, we can delete the other **Party** filter.
+
+**Congrats!** You’ve made your first dashboard, complete with dynamic filtering and interactivity. From here on out, most of the changes you might make would be cosmetic. For example, you can change the order of the filters on the right side of the screen, or you might wish to move the color scale closer to the map it corresponds to. Feel free to check out the “Best Practices” section below to get a better idea of how to construct a dashboard that helps you and others get the most out of your data.
+
+### d) Best Practices
+
+- Less is more  
+- Leverage the most-viewed spot (top left of the page)  
+- Highlighting  
+- Show filters as much as possible but not more than necessary  
+- Size: ranges, automatic, different sizing for different device types
