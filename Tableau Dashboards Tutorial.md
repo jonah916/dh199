@@ -1,5 +1,17 @@
 # Dashboards in Tableau: An Intermediate Guide
 
+1) [Introduction: Why dashboards?](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#1-introduction-why-dashboards)  
+2) [Data for this tutorial](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#2-data-for-this-tutorial)
+3) [Constructing your worksheets](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#3-constructing-your-worksheets)  
+  a) [Election map](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#3-constructing-your-worksheets)  
+  b) [Candidate Vote Totals by Year](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#b-candidate-vote-totals-by-year)  
+  c) [Party Vote Share by Year](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#c-party-vote-share-by-year)  
+4) [Constructing your dashboard](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#4-constructing-your-dashboard)  
+  a) [Parts of the dashboard workspace](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#a-parts-of-the-dashboard-workspace)  
+  b) [Adding sheets to your dashboard](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#b-adding-sheets-to-your-dashboard)  
+  c) [Dynamic filters and interactivity](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#c-dynamic-filters-and-interactivity)  
+  d) [Best practices](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#d-best-practices)
+
 ## 1) Introduction: Why dashboards?
 
 [Tableau dashboards](https://www.tableau.com/) are a compact way of combining multiple visualizations into a single view, making the trends in your data easier to see from multiple perspectives. Interactivity is a key feature, enabling you to slice and dice your data in more ways. There are a [wide variety of applications](https://www.idashboards.com/blog/2016/09/26/what-is-the-purpose-of-a-dashboard-2/), from business intelligence to sports analytics to data quality assurance.
