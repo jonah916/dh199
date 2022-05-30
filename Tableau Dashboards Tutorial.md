@@ -1,4 +1,5 @@
 # Dashboards in Tableau: An Intermediate Guide
+#### Tutorial by Jonah Wiener-Brodkey (jonah916@g.ucla.edu)
 
 1) [Introduction: Why dashboards?](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#1-introduction-why-dashboards)  
 2) [Data for this tutorial](https://github.com/jonah916/dh199/blob/main/Tableau%20Dashboards%20Tutorial.md#2-data-for-this-tutorial)
@@ -114,10 +115,10 @@ Start by clicking New Dashboard at the bottom of the screen.
 
 <img src = "https://github.com/jonah916/dh199/blob/main/visuals/Dashboard%20Workspace.png" width = "800">
 
-`1)` is where you specify what **type of device** the dashboard is for. You might wish to make a dashboard that’s viewable on mobile devices, but for this tutorial we’ll just use the default option, which is a desktop.
-`2)` is where you specify the **size of desktop** the dashboard will be compatible with. Change it to Generic Desktop.
-`3)` is the **list of worksheets** that exist in your workbook. In our case, they are the three visualizations we just made.
-`4)` is the bank of possible **objects** you can add to your dashboard. They let you customize the overall look, for instance by adding titles, third-party images, or blank space. For a complete explanation of each object, look [here](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-dashboard-objects-and-set-their-options).
+`1)` is where you specify what **type of device** the dashboard is for. You might wish to make a dashboard that’s viewable on mobile devices, but for this tutorial we’ll just use the default option, which is a desktop.  
+`2)` is where you specify the **size of desktop** the dashboard will be compatible with. Change it to Generic Desktop.  
+`3)` is the **list of worksheets** that exist in your workbook. In our case, they are the three visualizations we just made.  
+`4)` is the bank of possible **objects** you can add to your dashboard. They let you customize the overall look, for instance by adding titles, third-party images, or blank space. For a complete explanation of each object, look [here](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-dashboard-objects-and-set-their-options).  
 `5)` is where you specify whether your **dashboard layout** will be tiled or floating. In a tiled layout, all your sheets snap into a grid-like arrangement. In a floating layout, they are free to exist anywhere. For this tutorial, we’ll use a tiled layout.
 
 ### b) Adding sheets to your dashboard
@@ -160,8 +161,18 @@ Make sure this did what we wanted by selecting different values of **Party**. Do
 
 ### d) Best Practices
 
-- Less is more  
-- Leverage the most-viewed spot (top left of the page)  
-- Highlighting  
-- Show filters as much as possible but not more than necessary  
-- Size: ranges, automatic, different sizing for different device types
+There are a few rules of thumb you can keep in mind when building dashboards in the future. For a more comprehensive list, see [Tableau's documentation](https://help.tableau.com/current/pro/desktop/en-us/dashboards_best_practices.htm).
+
+* Less is more 
+  + If  you add too many sheets to your dashboard, the view becomes cluttered and it will be harder for you and other users to get the clearest view of your data. Furthermore, humans have limited [cognitive load](https://www.teachthought.com/learning/cognitive-load-theory/) and often can't absorb all the information you throw at them. With this in mind, putting too much on one dashboard is counterproductive. Consider redistributing your plots among multiple dashboards or eliminating some of them altogether.
+* Leverage the most-viewed spot (top left of the page)  
+  + Most viewers start at the top left of the page when looking at content on a web page. Identify a key takeaway from your dashboard and put the visualization that you feel best captures that takeaway towards the top left.
+* Enable highlighting
+  + Better showcase interesting data points across multiple sheets by enabling [highlighting](https://help.tableau.com/current/pro/desktop/en-us/actions_highlight.htm). You can make highlights customizable so users can highlight different views as they see fit.   
+* Show filters as much as possible but not more than necessary
+  + Let users take advantage of many possible views of your data. But add too many filters and the dashboard interface will look overwhelming, hindering the analysis of your data.  
+* Build dashboards at your final display size, or make the size adaptable  
+  + The last thing you want when making your dashboard is to go to all the trouble of displaying your data nicely only to find that the size of your dashboard is incompatible with your user's device. There are a number of different approahes when it comes to sizing. A few of them are...
+    - Automatic: Tableau automatically adapts the dashboard sizing to the user's screen size;
+    - Range: Lets you manually set a range of possible display sizes, helping to avoid the scrunched views that sometimes result from Automatic sizing;
+    - [Different sizing for different device types](https://help.tableau.com/current/pro/desktop/en-us/dashboards_dsd_create.htm): If you want to plan for your dashboard to be viewable on both desktop and mobile, you can make different layouts for each type of device.
