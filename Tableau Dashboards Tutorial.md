@@ -2,7 +2,7 @@
 #### Tutorial by Jonah Wiener-Brodkey (jonah916@g.ucla.edu)
 
 1) [Introduction: Why dashboards?](https://jonah916.github.io/dh199/Tableau%20Dashboards%20Tutorial.html#1-introduction-why-dashboards)  
-2) [Data for this tutorial](https://jonah916.github.io/dh199/Tableau%20Dashboards%20Tutorial.html#2-data-for-this-tutorial)
+2) [Data for this tutorial](https://jonah916.github.io/dh199/Tableau%20Dashboards%20Tutorial.html#2-data-for-this-tutorial)  
 3) [Constructing your worksheets](https://jonah916.github.io/dh199/Tableau%20Dashboards%20Tutorial.html#3-constructing-your-worksheets)  
   a) [Election map](https://jonah916.github.io/dh199/Tableau%20Dashboards%20Tutorial.html#3-constructing-your-worksheets)  
   b) [Candidate Vote Totals by Year](https://jonah916.github.io/dh199/Tableau%20Dashboards%20Tutorial.html#b-candidate-vote-totals-by-year)  
